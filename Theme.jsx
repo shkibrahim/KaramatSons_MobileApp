@@ -7,23 +7,31 @@ export const Themer = ({ children }) => {
   const [secondary, setSecondary] = useState('#4b94c4');
   const [background, setBackground] = useState('black');
   const [Tcolor,setTcolor] = useState('white')
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [logo, setLogo] = useState();
+  const [bar,setbar] = useState('#292526')
   const darkLogo = './src/assets/images/logo-blackclr.png';
-
+const [IconsColor,setIconsColor] = useState('white')
+const [circle,setcircle] = useState('#343031')
   useEffect(() => {
     if (theme === 'light') {
+      setbar('#292526')
+      setcircle('#343031')
       setPrimary('#1f84ce');
       setSecondary('#FC1055');
       setBackground('#fff');
-      setTcolor('black')
-      setLogo(require('./src/assets/images/logowhiteclr.png')); // Set to light logo if you have one
+      setTcolor('#343031'),setIconsColor('white')
+      setLogo(require('./src/assets/images/logowhitebg.png')); // Set to light logo if you have one
     } else if (theme === 'dark') {
+      setbar('#343031')
+      setcircle('#292526')
+
       setPrimary('#1f84ce');
       setSecondary('#FC1055');
       setBackground('black');
+      setIconsColor('white')
       setTcolor('#fff')
-      setLogo(require('./src/assets/images/logo-blackclr.png'));
+      setLogo(require('./src/assets/images/logoblackbg.png'));
     }
   }, [theme]);
 
@@ -32,7 +40,7 @@ export const Themer = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ Tcolor,primary, secondary, background, theme, logo, toggleTheme }}>
+    <ThemeContext.Provider value={{ Tcolor,primary, secondary, background, theme, logo, toggleTheme,IconsColor ,bar,circle}}>
       {children}
     </ThemeContext.Provider>
   );

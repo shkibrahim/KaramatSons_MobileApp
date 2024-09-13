@@ -5,10 +5,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useRef, useState} from 'react';
 import {StatusBar, StyleSheet, View} from 'react-native';
 import { scale } from 'react-native-size-matters';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import {Icon} from 'react-native-paper';
-import Home from './src/screens/Home/Home';
 import SideBar from './src/Components/SideBar/SideBar';
 import { useTheme } from './Theme';
+import Home from './src/Screens/TabScreens/Home/Home';
+import Cart from './src/Screens/TabScreens/Cart/Cart';
+import Liked from './src/Screens/TabScreens/Liked/Liked';
+import Profile from './src/Screens/TabScreens/Profile/Profile';
 // import Portfolio from './src/screens/Portfolio/Portfolio';
 // import Services from './src/screens/Services/Services';
 // import Profile from './src/screens/Profile/Profile';
@@ -33,208 +37,102 @@ const FurtherOptions ={
 }
 
 const TabNavigator = () => {
-  const { Tcolor, primary, secondary, background, theme, logo, toggleTheme } =
-  useTheme();
+  const { Tcolor, primary, secondary, background, theme, logo, toggleTheme ,IconsColor,bar,circle} = useTheme();
+
   return(
     <Tab.Navigator
       screenOptions={{
-        tabBarLabelStyle: {
-          color: 'red',
-          marginBottom: 5,
-        },
-        tabBarShowLabel: true,
+        tabBarShowLabel: false,
+        tabBarHideOnKeyboard: true, // Added here to apply globally
         tabBarStyle: {
-          backgroundColor: 'white',
-          borderTopWidth: 0.5,
-
-          elevation: 5,
-          paddingVertical: 5,
+          backgroundColor: bar,
+          position: 'absolute',
           height: scale(60),
+          margin: scale(16),
+          borderRadius: scale(37),
+          borderTopWidth: 0,
         },
-        tabBarActiveTintColor: '#2874F0',
-        tabBarInactiveTintColor: '#333',
-      }}>
-    <Tab.Screen
-  name="Home"
-  options={{
-    tabBarInactiveTintColor: '#444',
-    tabBarLabel: 'Home',
-    tabBarLabelStyle: {
-      fontFamily:'PoppinsR',
-      marginBottom: scale(5),
-    },
-    headerShown: false,
-    tabBarActiveTintColor: primary,
-    tabBarHideOnKeyboard: true,
-    animation: 'slide_from_bottom',
-    tabBarIcon: ({ focused }) => (
-      <View
-        style={
-          focused
-            ? {
-                backgroundColor: '#e7e7e7',
-                // paddingVertical: scale(9),
-                // marginTop:scale(5),
-                height:scale(29),alignItems:"center",justifyContent:"center",
-                paddingHorizontal:scale(15),
-                borderRadius: scale(14),
-                // shadowColor: '#000',
-                // shadowOffset: { width: 0, height: 2 },
-                // shadowOpacity: 0.25,
-                // shadowRadius: 3.84,
-                // elevation: 5,
-              }
-            : {}
-        }
-      >
-        <Icon
-          source={focused ? 'home' : 'home-outline'}
-          size={21}
-          color={focused ? primary : '#444'}
-        />
-      </View>
-    ),
-  }}
-  component={Home}
-/>
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: primary,
+          animation: 'slide_from_bottom',
+          tabBarIcon: ({ focused }) => (
+            <View style={{ ...styles.background, backgroundColor: circle }}>
+              <Icon
+                source={focused ? 'home-variant' : 'home-variant-outline'}
+                size={26}
+                color={focused ? IconsColor : '#e7e7e7'}
+              />
+            </View>
+          ),
+        }}
+        component={Home}
+      />
 
+      <Tab.Screen
+        name="Cart"
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: primary,
+          animation: 'slide_from_bottom',
+          tabBarIcon: ({ focused }) => (
+            <View style={{ ...styles.background, backgroundColor: circle }}>
+              <Icon
+                source={focused ? 'bag-personal' : 'bag-personal-outline'}
+                size={21}
+                color={focused ? IconsColor : '#e7e7e7'}
+              />
+            </View>
+          ),
+        }}
+        component={Cart}
+      />
 
+      <Tab.Screen
+        name="Liked"
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: primary,
+          animation: 'slide_from_bottom',
+          tabBarIcon: ({ focused }) => (
+            <View style={{ ...styles.background, backgroundColor: circle }}>
+              <Icon
+                source={focused ? 'cards-heart' : 'cards-heart-outline'}
+                size={21}
+                color={focused ? IconsColor : '#e7e7e7'}
+              />
+            </View>
+          ),
+        }}
+        component={Liked}
+      />
 
-<Tab.Screen
-  name="Services"
-  options={{
-    tabBarInactiveTintColor: '#444',
-    tabBarLabel: 'Services',
-    tabBarLabelStyle: {
-      fontFamily:'PoppinsR',
-      marginBottom: scale(5),
-    },
-    headerShown: false,
-    tabBarActiveTintColor: primary,
-    tabBarHideOnKeyboard: true,
-    animation: 'slide_from_bottom',
-    tabBarIcon: ({ focused }) => (
-      <View
-        style={
-          focused
-            ? {
-                backgroundColor: '#e7e7e7',
-                // paddingVertical: scale(9),
-                // marginTop:scale(5),
-                height:scale(29),alignItems:"center",justifyContent:"center",
-                paddingHorizontal:scale(15),
-                borderRadius: scale(14),
-                // shadowColor: '#000',
-                // shadowOffset: { width: 0, height: 2 },
-                // shadowOpacity: 0.25,
-                // shadowRadius: 3.84,
-                // elevation: 5,
-              }
-            : {}
-        }
-      >
-        <Icon
-          source={focused ? 'cookie-settings' : 'cookie-settings-outline'}
-          size={21}
-          color={focused ? primary : '#444'}
-        />
-      </View>
-    ),
-  }}
-  component={Services}
-/>
-
-<Tab.Screen
-  name="Portfolio"
-  options={{
-    tabBarInactiveTintColor: '#444',
-    tabBarLabel: 'Portfolio',
-    tabBarLabelStyle: {
-      fontFamily:'PoppinsR',
-      marginBottom: scale(5),
-    },
-    headerShown: false,
-    tabBarActiveTintColor: primary,
-    tabBarHideOnKeyboard: true,
-    animation: 'slide_from_bottom',
-    tabBarIcon: ({ focused }) => (
-      <View
-        style={
-          focused
-            ? {
-                backgroundColor: '#e7e7e7',
-                // paddingVertical: scale(9),
-                // marginTop:scale(5),
-                height:scale(29),alignItems:"center",justifyContent:"center",
-                paddingHorizontal:scale(15),
-                borderRadius: scale(14),
-                // shadowColor: '#000',
-                // shadowOffset: { width: 0, height: 2 },
-                // shadowOpacity: 0.25,
-                // shadowRadius: 3.84,
-                // elevation: 5,
-              }
-            : {}
-        }
-      >
-        <Icon
-          source={focused ? 'briefcase-eye' : 'briefcase-eye-outline'}
-          size={21}
-          color={focused ? primary : '#444'}
-        />
-      </View>
-    ),
-  }}
-  component={Portfolio}
-/>
-    
-<Tab.Screen
-  name="Profile"
-  options={{
-    tabBarInactiveTintColor: '#444',
-    tabBarLabel: 'Profile',
-    tabBarLabelStyle: {
-      fontFamily:'PoppinsR',
-      marginBottom: scale(5),
-    },
-    headerShown: false,
-    tabBarActiveTintColor: primary,
-    tabBarHideOnKeyboard: true,
-    animation: 'slide_from_bottom',
-    tabBarIcon: ({ focused }) => (
-      <View
-        style={
-          focused
-            ? {
-                backgroundColor: '#e7e7e7',
-                // paddingVertical: scale(9),
-                // marginTop:scale(5),
-                height:scale(29),alignItems:"center",justifyContent:"center",
-                paddingHorizontal:scale(15),
-                borderRadius: scale(14),
-                // shadowColor: '#000',
-                // shadowOffset: { width: 0, height: 2 },
-                // shadowOpacity: 0.25,
-                // shadowRadius: 3.84,
-                // elevation: 5,
-              }
-            : {}
-        }
-      >
-        <Icon
-          source={focused ? 'account-circle' : 'account-circle-outline'}
-          size={21}
-          color={focused ? primary : '#444'}
-        />
-      </View>
-    ),
-  }}
-  component={Profile}
-/>
-
+      <Tab.Screen
+        name="Profile"
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: primary,
+          animation: 'slide_from_bottom',
+          tabBarIcon: ({ focused }) => (
+            <View style={{ ...styles.background, backgroundColor: circle }}>
+              <Icon
+                source={focused ? 'account-circle' : 'account-circle-outline'}
+                size={21}
+                color={focused ? IconsColor : '#e7e7e7'}
+              />
+            </View>
+          ),
+        }}
+        component={Profile}
+      />
     </Tab.Navigator>
-  )
-}
+  );
+};
+
 
 
   
@@ -243,7 +141,7 @@ const TabNavigator = () => {
 
   const StackNavigator = ({isAuthenticated}) => (
     <Stack.Navigator 
-    initialRouteName={isAuthenticated ? 'Login' :  'Login'}
+    initialRouteName={isAuthenticated ? 'TabStart' :  'TabStart'}
     >
 
     <Stack.Screen
@@ -251,12 +149,12 @@ const TabNavigator = () => {
       component={TabNavigator}
       options={{headerShown: false, animation: 'slide_from_bottom'}}
     />
-   <Stack.Screen
+   {/* <Stack.Screen
       name="Login"
       component={Login}
       options={{headerShown: false, animation: 'slide_from_left',gestureEnabled: false ,}}
-    />
-     <Stack.Screen
+    /> */}
+     {/* <Stack.Screen
       name="MessageView"
       component={MessageView}
       options={{ headerShown: false, animation: 'slide_from_left',  }}
@@ -266,7 +164,7 @@ const TabNavigator = () => {
       name="Chat"
       component={Chat}
       options={{ headerShown: false, animation: 'slide_from_right',  }}
-    />
+    /> */}
     {/* <Stack.Screen
       name="MessageView"
       component={MessageView}
@@ -279,7 +177,7 @@ const TabNavigator = () => {
 );
 
 const MainNav = () => {
-  const { Tcolor, primary, secondary, background, theme, logo, toggleTheme } =
+  const { Tcolor, primary, secondary, background, theme, logo, toggleTheme,IconsColor,bar } =
   useTheme();
 
 const [isAuthenticated,setisAuthenticated] = useState(false)
@@ -297,13 +195,13 @@ return (
     </Drawer.Screen>
     
 
-<Drawer.Screen
+{/* <Drawer.Screen
       name="Search"
       options={{
         headerShown: false,
       }}
       component={Search}
-    />
+    /> */}
     {/* <Drawer.Screen
       name="Chat"
       options={{
@@ -311,7 +209,7 @@ return (
       }}
       component={Chat}
     /> */}
-     <Drawer.Screen
+     {/* <Drawer.Screen
       name="ContactUs"
       options={{
         headerShown: false,
@@ -352,11 +250,22 @@ return (
         headerShown: false,
       }}
       component={Terms}
-    />
+    /> */}
   </Drawer.Navigator>
 </NavigationContainer>
   );
 };
 
 
+
+
+
+const styles = StyleSheet.create({
+
+  background:{
+    borderRadius:scale(40),
+    width:scale(40),overflow:'hidden',
+    height:scale(40),alignItems:"center",justifyContent:"center",
+  }
+})
 export default MainNav;
