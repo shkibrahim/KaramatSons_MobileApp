@@ -10,9 +10,11 @@ export const Themer = ({ children }) => {
   const [theme, setTheme] = useState('light');
   const [logo, setLogo] = useState();
   const [bar,setbar] = useState('#292526')
-  const darkLogo = './src/assets/images/logo-blackclr.png';
+  // const darkLogo = './src/assets/images/logo-blackclr.png';
 const [IconsColor,setIconsColor] = useState('white')
 const [circle,setcircle] = useState('#343031')
+const [LightLogo,setLightLogo] = useState(require('./src/assets/images/logowhitebg.png'))
+const [DarkLogo,setDarkLogo] =useState(require('./src/assets/images/logoblackbg.png'))
   useEffect(() => {
     if (theme === 'light') {
       setbar('#292526')
@@ -40,7 +42,7 @@ const [circle,setcircle] = useState('#343031')
   };
 
   return (
-    <ThemeContext.Provider value={{ Tcolor,primary, secondary, background, theme, logo, toggleTheme,IconsColor ,bar,circle}}>
+    <ThemeContext.Provider value={{DarkLogo, LightLogo, Tcolor,primary, secondary, background, theme, logo, toggleTheme,IconsColor ,bar,circle}}>
       {children}
     </ThemeContext.Provider>
   );

@@ -48,7 +48,8 @@ const TabNavigator = () => {
           backgroundColor: bar,
           position: 'absolute',
           height: scale(60),
-          margin: scale(16),
+          marginBottom: scale(16),
+          marginHorizontal:scale(16),
           borderRadius: scale(37),
           borderTopWidth: 0,
         },
@@ -185,8 +186,8 @@ const navigationRef = useRef()
 return (
   <NavigationContainer  ref={navigationRef}>
   <StatusBar
-    backgroundColor={theme=='light'? 'black' : primary}
-    barStyle="light-content"
+    backgroundColor={theme=='light'? 'transparent' : 'black'}
+    barStyle="dark-content"
   />
 
   <Drawer.Navigator drawerContent={() => <SideBar />}>

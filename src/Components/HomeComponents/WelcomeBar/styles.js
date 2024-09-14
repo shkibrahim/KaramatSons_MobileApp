@@ -9,12 +9,13 @@ const createStyles = (theme) => {
   return StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: theme.background,
-      height:deviceheight
+      backgroundColor: 'transparent',
+    //   height:deviceheight
     },
     bar:{
         margin:scale(16),
         flexDirection:"row",
+        backgroundColor:'transparent',
         alignItems:"center",justifyContent:"space-between"
     },
     start:{

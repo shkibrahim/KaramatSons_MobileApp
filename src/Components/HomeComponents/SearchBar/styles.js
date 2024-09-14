@@ -12,10 +12,10 @@ const createStyles = (theme) => {
         alignItems:"center",flexDirection:"row",marginHorizontal:scale(16),justifyContent:'space-between'
     },
     inputview:{
-        flexDirection:"row",alignItems:'center',borderWidth:scale(0.7),borderRadius:scale(9),height:scale(52),width:"80%",borderColor:'#ddd',overflow:"hidden"
+        flexDirection:"row",alignItems:'center',borderWidth:scale(0.7),borderRadius:scale(9),height:scale(45),width:"81%",borderColor:'#ddd',overflow:"hidden"
     },
     filterbtn:{
-        height:scale(52),backgroundColor:theme.circle,width:'16%',borderRadius:scale(9),alignItems:"center",justifyContent:'center'
+        height:scale(45),backgroundColor:theme.circle,width:'16%',borderRadius:scale(9),alignItems:"center",justifyContent:'center'
 
     },
     input:{
