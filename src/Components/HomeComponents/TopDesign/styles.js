@@ -9,7 +9,9 @@ const createStyles = (theme) => {
   return StyleSheet.create({
     image:{
         width:devicewidth,height:deviceheight+12
-    }
+    },
+    pagination:
+    { flexDirection: 'row', justifyContent: 'center', position:"absolute",width:'100%',bottom:scale(50) },
   });
 };
 

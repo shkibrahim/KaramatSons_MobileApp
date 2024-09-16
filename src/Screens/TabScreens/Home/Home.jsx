@@ -11,6 +11,7 @@ import HomeList from '../../../DataLists/HomeList';
 import SecondHeader from '../../../Components/HomeComponents/SecondHeader/SecondHeader';
 import TopDesign from '../../../Components/HomeComponents/TopDesign/TopDesign';
 import { LinearGradient } from 'expo-linear-gradient';
+import ShopByPopularCategory from '../../../Components/HomeComponents/ShopByPopularCategory/ShopByPopularCategory';
 const Home = ({navigation}) => {
   const { Tcolor, primary, secondary, background, theme, logo, toggleTheme ,DarkLogo} =
   useTheme();
@@ -81,6 +82,7 @@ const myfunc = ()=>{
   <ScrollView 
         onScroll={handleScroll}
         scrollEventThrottle={16}
+        nestedScrollEnabled={true}
         showsVerticalScrollIndicator={false}>
    {NavbarChecker == false && (
   <>
@@ -124,9 +126,9 @@ const myfunc = ()=>{
         setFilterListing={setFilterListing} 
       />
     )}
-    
+    <ShopByPopularCategory/>
 
- <DesignLayout ListData={ListData}/>
+ {/* <DesignLayout ListData={ListData}/> */}
  </ScrollView>
     </SafeAreaView>
   )
