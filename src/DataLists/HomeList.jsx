@@ -1,4 +1,4 @@
-export default MobAppData = [
+export default HomeList = [
     {
       id: 1,
       Title: 'Banarsi Border Pashmina Shawl',
