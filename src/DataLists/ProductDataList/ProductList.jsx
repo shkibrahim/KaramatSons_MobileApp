@@ -223,6 +223,39 @@ export default ProductList = [
       LikedBy: [{ id: 1, Name: "Maha Tariq" }, { id: 2, Name: "Saba Noor" }],
       updateAt: "2022-07-20"
     },
+    {
+      id: 8,
+      Title: "Embroidered Loan Dupatta",
+      Images: [
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
+      ],
+      Description: "Elegant loan dupatta with fine embroidery.",
+      SubDescription: "Hand made Indian Wool Shawl",
+
+      PurchasePrice: 900,
+      Season:'Summer',
+
+      WholeSalePrice: 1100,
+      RetailPrice: 2500,
+      Category: "Dupatta",
+      Stuff: "Loan",
+      onSale: false,
+      SalePercentage: 0,
+      createAt: "2022-01-01",
+      Stock: 150,
+      Popular: true,
+      Trending: false,
+      Rating: 4.5,
+      Reviews: [
+        { id: 1, Review: "Beautiful piece", Rating: 4, Name: "Hina Tariq" },
+        { id: 2, Review: "Good for daily wear", Rating: 4, Name: "Sara Khan" }
+      ],
+      Likes: 80,
+      LikedBy: [{ id: 1, Name: "Hina Tariq" }, { id: 2, Name: "Sara Khan" }],
+      updateAt: "2022-02-01"
+    },
    
   ];
   

@@ -7,6 +7,8 @@ const deviceheight = Dimensions.get("window").height;
 
 const createStyles = (theme) => {
   return StyleSheet.create({
+
+    contain:{ flex: 1 ,marginVertical:scale(10),marginLeft:scale(10),overflow:"hidden"},
     container: {
         marginVertical:scale(10),
   
@@ -26,8 +28,15 @@ const createStyles = (theme) => {
         marginHorizontal:scale(10)
     },
     viewitem:{
-        width:(devicewidth/2)-12,alignItems:"center",height:200,backgroundColor:'#ced3d4',marginRight:scale(10),marginLeft:scale(10)
+        width:scale(160),alignItems:"center",height:200,backgroundColor:'#ced3d4',alignSelf:"center",
+    },
+    gap:{
+      marginRight:scale(10)
     }
+    // contentContainer:{
+    //     gap:10
+        
+    // }
 
   });
 };
