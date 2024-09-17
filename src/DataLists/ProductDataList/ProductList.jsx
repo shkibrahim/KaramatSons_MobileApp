@@ -1,15 +1,17 @@
 export default ProductList = [
     {
       id: 1,
-      Title: "Banarsi Border Pashmina Shawl",
+      Title: "Indian Kingry Pashmina Shawl",
       Images: [
-        { id: 1, Image: "https://link1.jpg" },
-        { id: 2, Image: "https://link2.jpg" },
-        { id: 3, Image: "https://link3.jpg" }
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
-      Description: "Soft Pashmina with a luxurious Banarsi border.",
+      SubDescription: "Hand made Indian Wool Shawl",
+      Description: "Soft Pashmina with a luxurious Hand made border.",
       PurchasePrice: 1200,
       WholeSalePrice: 1500,
+      Season:'Winter',
       RetailPrice: 3000,
       Category: "Shawl",
       Stuff: "Pashmina",
@@ -32,12 +34,16 @@ export default ProductList = [
       id: 2,
       Title: "Embroidered Loan Dupatta",
       Images: [
-        { id: 1, Image: "https://link4.jpg" },
-        { id: 2, Image: "https://link5.jpg" },
-        { id: 3, Image: "https://link6.jpg" }
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
       Description: "Elegant loan dupatta with fine embroidery.",
+      SubDescription: "Hand made Indian Wool Shawl",
+
       PurchasePrice: 900,
+      Season:'Summer',
+
       WholeSalePrice: 1100,
       RetailPrice: 2500,
       Category: "Dupatta",
@@ -61,11 +67,14 @@ export default ProductList = [
       id: 3,
       Title: "Woollen Stoller",
       Images: [
-        { id: 1, Image: "https://link7.jpg" },
-        { id: 2, Image: "https://link8.jpg" },
-        { id: 3, Image: "https://link9.jpg" }
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
       Description: "Cozy woollen stoller perfect for winter wear.",
+      SubDescription: "Hand made Indian Wool Shawl",
+      Season:'Winter',
+
       PurchasePrice: 800,
       WholeSalePrice: 1000,
       RetailPrice: 2000,
@@ -90,11 +99,14 @@ export default ProductList = [
       id: 4,
       Title: "Formal Swiss Loan Shawl",
       Images: [
-        { id: 1, Image: "https://link10.jpg" },
-        { id: 2, Image: "https://link11.jpg" },
-        { id: 3, Image: "https://link12.jpg" }
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
       Description: "Swiss loan shawl with formal embroidery.",
+      SubDescription: "Hand made Indian Wool Shawl",
+      Season:'Summer',
+
       PurchasePrice: 1300,
       WholeSalePrice: 1600,
       RetailPrice: 3500,
@@ -119,11 +131,14 @@ export default ProductList = [
       id: 5,
       Title: "Karalic Border Shawl",
       Images: [
-        { id: 1, Image: "https://link13.jpg" },
-        { id: 2, Image: "https://link14.jpg" },
-        { id: 3, Image: "https://link15.jpg" }
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
       Description: "Karalic border shawl for elegant looks.",
+      SubDescription: "Hand made Indian Wool Shawl",
+      Season:'Summer',
+
       PurchasePrice: 1100,
       WholeSalePrice: 1400,
       RetailPrice: 2800,
@@ -148,11 +163,14 @@ export default ProductList = [
       id: 6,
       Title: "Embroidered Net Burka",
       Images: [
-        { id: 1, Image: "https://link16.jpg" },
-        { id: 2, Image: "https://link17.jpg" },
-        { id: 3, Image: "https://link18.jpg" }
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
       Description: "Net Burka with detailed embroidery.",
+      SubDescription: "Hand made Indian Wool Shawl",
+      Season:'Summer',
+
       PurchasePrice: 1800,
       WholeSalePrice: 2000,
       RetailPrice: 4000,
@@ -177,11 +195,14 @@ export default ProductList = [
       id: 7,
       Title: "Barosha Dupatta",
       Images: [
-        { id: 1, Image: "https://link19.jpg" },
-        { id: 2, Image: "https://link20.jpg" },
-        { id: 3, Image: "https://link21.jpg" }
+        { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
+        { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
       Description: "Soft Barosha dupatta with a sleek look.",
+      SubDescription: "Hand made Indian Wool Shawl",
+      Season:'Summer',
+
       PurchasePrice: 1000,
       WholeSalePrice: 1200,
       RetailPrice: 2600,
