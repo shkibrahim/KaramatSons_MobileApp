@@ -49,7 +49,7 @@ const TabNavigator = () => {
           position: 'absolute',
           height: scale(60),
           marginBottom: scale(16),
-          marginHorizontal:scale(16),
+          marginHorizontal:scale(10),
           borderRadius: scale(37),
           borderTopWidth: 0,
         },

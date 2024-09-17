@@ -12,6 +12,7 @@ import SecondHeader from '../../../Components/HomeComponents/SecondHeader/Second
 import TopDesign from '../../../Components/HomeComponents/TopDesign/TopDesign';
 import { LinearGradient } from 'expo-linear-gradient';
 import ShopByPopularCategory from '../../../Components/HomeComponents/ShopByPopularCategory/ShopByPopularCategory';
+import NewOnSale from '../../../Components/HomeComponents/NewOnSale/NewOnSale';
 const Home = ({navigation}) => {
   const { Tcolor, primary, secondary, background, theme, logo, toggleTheme ,DarkLogo} =
   useTheme();
@@ -127,7 +128,7 @@ const myfunc = ()=>{
       />
     )}
     <ShopByPopularCategory/>
-
+<NewOnSale/>
  {/* <DesignLayout ListData={ListData}/> */}
  </ScrollView>
     </SafeAreaView>
