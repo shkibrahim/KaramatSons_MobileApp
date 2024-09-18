@@ -15,6 +15,7 @@ import ShopByPopularCategory from "../../../Components/HomeComponents/ShopByPopu
 import NewOnSale from "../../../Components/HomeComponents/NewOnSale/NewOnSale";
 import NewArrivals from "../../../Components/HomeComponents/NewArrivals/NewArrivals";
 import Trending from "../../../Components/HomeComponents/Trending/Trending";
+import Blog from "../../../Components/HomeComponents/Blog/Blog";
 const Home = ({ navigation }) => {
   const {
     Tcolor,
@@ -146,6 +147,7 @@ const Home = ({ navigation }) => {
         <NewOnSale />
         <NewArrivals/>
         <Trending/>
+        <Blog/>
       <View style={{ height: 400 }}></View>
 
         {/* <DesignLayout ListData={ListData}/> */}
