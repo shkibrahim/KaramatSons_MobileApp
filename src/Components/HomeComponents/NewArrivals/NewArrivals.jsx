@@ -2,10 +2,10 @@ import { View, Text, ScrollView, Image,ActivityIndicator } from "react-native";
 import React, { useState,useEffect,useRef } from "react";
 import { useTheme } from "../../../../Theme";
 import createStyles from "./styles";
-import SaleFilter from "./SaleFilter";
+import ArrivalFilter from "./ArrivalFilter";
 import ProductDisplay from "../ProductDisplay/ProductDisplay";
 import ProductList from "../../../DataLists/ProductDataList/ProductList";
-export default function NewOnSale() {
+export default function NewArrivals() {
   const {
     Tcolor,
     primary,
@@ -33,8 +33,12 @@ export default function NewOnSale() {
   const flatListRef = useRef(null);
   const filterData = () => {
     setLoading(true);
+    
     const words = Filtervalue.toLowerCase().split(" "); // Split Filtervalue into individual words
     const filteredList = []; // List to store matched items
+    const currentDate = new Date(); // Get current date
+    const oneMonthAgo = new Date(); // Create date object for one month ago
+    oneMonthAgo.setMonth(currentDate.getMonth() - 3); // Set date to one month ago
   
     ProductList.forEach((item) => {
       // Convert all item fields to lowercase and split into words
@@ -45,6 +49,9 @@ export default function NewOnSale() {
       const Season = item.Season.toLowerCase().split(" ");
       const Gender = item.Gender.toLowerCase().split(" ");
       const Stuff = item.Stuff.toLowerCase().split(" ");
+  
+      // Parse item's `createAt` date
+      const itemCreateAt = new Date(item.createAt); // Assuming `item.createAt` is a valid date string
   
       // Count the number of matches for each product
       let matchCount = 0;
@@ -63,7 +70,8 @@ export default function NewOnSale() {
         }
       });
   
-      if (matchCount > 0 && item.onSale === true) {
+      // Check matchCount and whether createAt is within the last month
+      if (matchCount > 0 && itemCreateAt > oneMonthAgo ) {
         // Push the item and its match count to the list
         filteredList.push({ item, matchCount });
       }
@@ -81,6 +89,7 @@ export default function NewOnSale() {
   
   
   
+  
   const handleViewMore = () => {
     console.log("red");
     // setVisibleProducts((prev) => prev + 10); // Show 10 more products when "View More" is clicked
@@ -94,9 +103,8 @@ export default function NewOnSale() {
   }, [Filtervalue]);
   return (
     <View style={styles.container}>
-      <Text style={styles.head}>NEW ON SALE</Text>
-      <SaleFilter Filtervalue={Filtervalue} setFiltervalue={setFiltervalue} />
-
+      <Text style={styles.head}>NEW ARRIVALS</Text>
+      <ArrivalFilter Filtervalue={Filtervalue} setFiltervalue={setFiltervalue} />
       {
         loading ? <ActivityIndicator size="large" color="#000" /> :
         <ProductDisplay

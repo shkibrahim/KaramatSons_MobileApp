@@ -1,20 +1,21 @@
 export default ProductList = [
     {
       id: 1,
-      Title: "Indian Kingry Pashmina Shawl",
+      Title: "Hijab Kingry Pashmina Shawl",
+      Gender:'women',
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 3, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" }
       ],
       SubDescription: "Hand made Indian Wool Shawl",
-      Description: "Soft Pashmina with a luxurious Hand made border.",
+      Description: "Best for Hijab with a luxurious Hand made border.",
       PurchasePrice: 1200,
       WholeSalePrice: 1500,
       Season:'Winter',
       RetailPrice: 3000,
       Category: "Shawl",
-      Stuff: "Pashmina",
+      Stuff: "Loan",
       onSale: true,
       SalePercentage: 30,
       createAt: "2021-09-01",
@@ -32,7 +33,9 @@ export default ProductList = [
     },
     {
       id: 2,
-      Title: "Embroidered Loan Dupatta",
+      Title: "Summer Shawls Embroidered Loan Dupatta",
+      Gender:'women',
+
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -66,6 +69,8 @@ export default ProductList = [
     {
       id: 3,
       Title: "Woollen Stoller",
+      Gender:'women',
+
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -79,10 +84,10 @@ export default ProductList = [
       WholeSalePrice: 1000,
       RetailPrice: 2000,
       Category: "Stoller",
-      Stuff: "Wool",
+      Stuff: "Shafoon",
       onSale: true,
       SalePercentage: 20,
-      createAt: "2022-03-01",
+      createAt: "2024-08-01",
       Stock: 120,
       Popular: false,
       Trending: true,
@@ -93,11 +98,13 @@ export default ProductList = [
       ],
       Likes: 90,
       LikedBy: [{ id: 1, Name: "Ahmed Ali" }, { id: 2, Name: "Zara Yousuf" }],
-      updateAt: "2022-03-15"
+      updateAt: "2024-05-15"
     },
     {
       id: 4,
-      Title: "Formal Swiss Loan Shawl",
+      Title: "Velvet Shawl with Embroidery",
+      Gender:'women',
+
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -114,7 +121,7 @@ export default ProductList = [
       Stuff: "Swiss Loan",
       onSale: false,
       SalePercentage: 0,
-      createAt: "2022-04-01",
+      createAt: "2024-09-01",
       Stock: 90,
       Popular: true,
       Trending: false,
@@ -125,11 +132,13 @@ export default ProductList = [
       ],
       Likes: 110,
       LikedBy: [{ id: 1, Name: "Zainab Noor" }, { id: 2, Name: "Farhan Qadir" }],
-      updateAt: "2022-04-20"
+      updateAt: "2024-04-20"
     },
     {
       id: 5,
       Title: "Karalic Border Shawl",
+      Gender:'men',
+
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -146,7 +155,7 @@ export default ProductList = [
       Stuff: "Karalic",
       onSale: true,
       SalePercentage: 25,
-      createAt: "2022-05-01",
+      createAt: "2024-05-01",
       Stock: 80,
       Popular: false,
       Trending: true,
@@ -162,6 +171,8 @@ export default ProductList = [
     {
       id: 6,
       Title: "Embroidered Net Burka",
+      Gender:'men',
+
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -178,7 +189,7 @@ export default ProductList = [
       Stuff: "Net",
       onSale: false,
       SalePercentage: 0,
-      createAt: "2022-06-01",
+      createAt: "2024-06-01",
       Stock: 70,
       Popular: true,
       Trending: true,
@@ -189,11 +200,13 @@ export default ProductList = [
       ],
       Likes: 95,
       LikedBy: [{ id: 1, Name: "Ayesha Khan" }, { id: 2, Name: "Sana Malik" }],
-      updateAt: "2022-06-15"
+      updateAt: "2024-06-15"
     },
     {
       id: 7,
       Title: "Barosha Dupatta",
+      Gender:'men',
+
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -210,7 +223,7 @@ export default ProductList = [
       Stuff: "Barosha",
       onSale: true,
       SalePercentage: 15,
-      createAt: "2022-07-01",
+      createAt: "2024-07-01",
       Stock: 100,
       Popular: false,
       Trending: false,
@@ -221,10 +234,12 @@ export default ProductList = [
       ],
       Likes: 70,
       LikedBy: [{ id: 1, Name: "Maha Tariq" }, { id: 2, Name: "Saba Noor" }],
-      updateAt: "2022-07-20"
+      updateAt: "2024-07-20"
     },
     {
       id: 8,
+      Gender:'men',
+
       Title: "Embroidered Loan Dupatta",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -241,9 +256,9 @@ export default ProductList = [
       RetailPrice: 2500,
       Category: "Dupatta",
       Stuff: "Loan",
-      onSale: false,
-      SalePercentage: 0,
-      createAt: "2022-01-01",
+      onSale: true,
+      SalePercentage: 10,
+      createAt: "2024-01-01",
       Stock: 150,
       Popular: true,
       Trending: false,
@@ -254,7 +269,7 @@ export default ProductList = [
       ],
       Likes: 80,
       LikedBy: [{ id: 1, Name: "Hina Tariq" }, { id: 2, Name: "Sara Khan" }],
-      updateAt: "2022-02-01"
+      updateAt: "2024-02-01"
     },
    
   ];

@@ -13,6 +13,8 @@ import TopDesign from "../../../Components/HomeComponents/TopDesign/TopDesign";
 import { LinearGradient } from "expo-linear-gradient";
 import ShopByPopularCategory from "../../../Components/HomeComponents/ShopByPopularCategory/ShopByPopularCategory";
 import NewOnSale from "../../../Components/HomeComponents/NewOnSale/NewOnSale";
+import NewArrivals from "../../../Components/HomeComponents/NewArrivals/NewArrivals";
+import Trending from "../../../Components/HomeComponents/Trending/Trending";
 const Home = ({ navigation }) => {
   const {
     Tcolor,
@@ -142,6 +144,10 @@ const Home = ({ navigation }) => {
         )}
         <ShopByPopularCategory />
         <NewOnSale />
+        <NewArrivals/>
+        <Trending/>
+      <View style={{ height: 400 }}></View>
+
         {/* <DesignLayout ListData={ListData}/> */}
       </ScrollView>
     </SafeAreaView>

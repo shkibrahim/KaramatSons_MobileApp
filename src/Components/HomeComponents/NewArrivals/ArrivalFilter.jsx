@@ -2,7 +2,7 @@ import { View, Text,ScrollView,TouchableOpacity } from 'react-native'
 import React,{useState} from 'react'
 import { useTheme } from '../../../../Theme';
 import createStyles from './styles';
-export default function SaleFilter({
+export default function ArrivalFilter({
   Filtervalue,
   setFiltervalue
 }) {
@@ -19,7 +19,7 @@ export default function SaleFilter({
     toggleTheme,
   });
 
-  const [SummerShawls, setSummerShawls] = useState({
+  const [WinterShawls, setWinterShawls] = useState({
     items: "white",
     background: "#292526",
   });
@@ -27,15 +27,15 @@ export default function SaleFilter({
     items: "#292526",
     background: "#fff",
   });
-  const [ShafoonDuppata, setShafoonDuppata] = useState({
+  const [VelvetShawls, setVelvetShawls] = useState({
     items: "#292526",
     background: "#fff",
   });
-  const [HijabItems, setHijabItems] = useState({
+  const [AbayaShawl, setAbayaShawl] = useState({
     items: "#292526",
     background: "#fff",
   });
-  const [LoanStoller, setLoanStoller] = useState({
+  const [SilkStoller, setSilkStoller] = useState({
     items: "#292526",
     background: "#fff",
   });
@@ -43,9 +43,9 @@ const Selector = (SelectedItem) =>{
     // setFilterListing(SelectedItem)
   setFiltervalue(SelectedItem)
 
-    if (SelectedItem == 'Summer Shawls'){
+    if (SelectedItem == 'Winter Shawl'){
       
-        setSummerShawls({
+        setWinterShawls({
             items: "white",
     background: "#292526",
         })
@@ -53,22 +53,22 @@ const Selector = (SelectedItem) =>{
             items: "#292526",
             background: "#fff",
         })
-        setLoanStoller({
+        setVelvetShawls({
             items: "#292526",
             background: "#fff",
         })
-        setHijabItems({
+        setAbayaShawl({
             items: "#292526",
             background: "#fff",
         })
-        setShafoonDuppata({
+        setSilkStoller({
             items: "#292526",
             background: "#fff",
         })
     }
 
     if (SelectedItem == 'Men'){
-        setSummerShawls({
+        setWinterShawls({
             items: "#292526",
     background: "#fff",
         })
@@ -76,22 +76,22 @@ const Selector = (SelectedItem) =>{
             items: "#fff",
             background: "#292526",
         })
-        setHijabItems({
+        setAbayaShawl({
             items: "#292526",
             background: "#fff",
         })
-        setLoanStoller({
+        setSilkStoller({
             items: "#292526",
             background: "#fff",
         })
-        setShafoonDuppata({
+        setVelvetShawls({
             items: "#292526",
             background: "#fff",
         })
     }
 
-    if (SelectedItem == 'Loan Stollers'){
-        setSummerShawls({
+    if (SelectedItem == 'Velvet Shawl'){
+        setWinterShawls({
             items: "#292526",
     background: "#fff",
         })
@@ -99,22 +99,22 @@ const Selector = (SelectedItem) =>{
             items: "#292526",
             background: "#fff",
         })
-        setHijabItems({
+        setAbayaShawl({
             items: "#292526",
             background: "#fff",
         })
-        setLoanStoller({
+        setVelvetShawls({
             items: "#fff",
             background: "#292526",
         })
-        setShafoonDuppata({
+        setSilkStoller({
             items: "#292526",
             background: "#fff",
         })
     }
 
-    if (SelectedItem == 'Hijab Items'){
-        setSummerShawls({
+    if (SelectedItem == 'Abaya Shawl'){
+        setWinterShawls({
             items: "#292526",
     background: "#fff",
         })
@@ -122,21 +122,21 @@ const Selector = (SelectedItem) =>{
             items: "#292526",
             background: "#fff",
         })
-        setLoanStoller({
+        setSilkStoller({
             items: "#292526",
             background: "#fff",
         })
-        setShafoonDuppata({
+        setVelvetShawls({
             items: "#292526",
             background: "#fff",
         })
-        setHijabItems({
+        setAbayaShawl({
             items: "#fff",
             background: "#292526",
         })
     }
-    if (SelectedItem == 'Shafoon Duppata'){
-        setSummerShawls({
+    if (SelectedItem == 'Silk Stoller'){
+        setWinterShawls({
             items: "#292526",
     background: "#fff",
         })
@@ -144,15 +144,15 @@ const Selector = (SelectedItem) =>{
             items: "#292526",
             background: "#fff",
         })
-        setShafoonDuppata({
+        setSilkStoller({
             items: "#fff",
             background: "#292526",
         })
-        setHijabItems({
+        setAbayaShawl({
             items: "#292526",
             background: "#fff",
         })
-        setLoanStoller({
+        setVelvetShawls({
             items: "#292526",
             background: "#fff",
         })
@@ -161,12 +161,12 @@ const Selector = (SelectedItem) =>{
   return (
     <View style={styles.margin}>
          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <TouchableOpacity onPress={()=>Selector('Summer Shawls')}
+        <TouchableOpacity onPress={()=>Selector('Winter Shawl')}
           activeOpacity={0.7}
-          style={{ ...styles.btn, backgroundColor: SummerShawls.background }}
+          style={{ ...styles.btn, backgroundColor: WinterShawls.background }}
         >
-          <Text style={{ ...styles.btntxt, color: SummerShawls.items }}>
-            Summer Shawls
+          <Text style={{ ...styles.btntxt, color: WinterShawls.items }}>
+          Winter Shawls
           </Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>Selector('Men')}
@@ -178,30 +178,30 @@ const Selector = (SelectedItem) =>{
             Men
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>Selector('Loan Stollers')}
+        <TouchableOpacity onPress={()=>Selector('Silk Stoller')}
           activeOpacity={0.7}
-          style={{ ...styles.btn, backgroundColor: LoanStoller.background }}
+          style={{ ...styles.btn, backgroundColor: SilkStoller.background }}
         >
           {/* <SvgXml xml={StollerClr.svg} width="25" height="25" /> */}
-          <Text style={{ ...styles.btntxt, color: LoanStoller.items }}>
-           Loan Stollers
+          <Text style={{ ...styles.btntxt, color: SilkStoller.items }}>
+          Silk Stollers
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={()=>Selector('Hijab Items')}
+        <TouchableOpacity onPress={()=>Selector('Abaya Shawl')}
           activeOpacity={0.7}
-          style={{ ...styles.btn, backgroundColor: HijabItems.background }}
+          style={{ ...styles.btn, backgroundColor: AbayaShawl.background }}
         >
           {/* <SvgXml xml={AbayaClr.svg} width="25" height="25" /> */}
-          <Text style={{ ...styles.btntxt, color: HijabItems.items }}>Hijab items</Text>
+          <Text style={{ ...styles.btntxt, color: AbayaShawl.items }}>Abaya Shawls</Text>
         </TouchableOpacity>
         <TouchableOpacity
-     onPress={()=>Selector('Shafoon Duppata')}
+     onPress={()=>Selector('Velvet Shawl')}
           activeOpacity={0.7}
-          style={{ ...styles.btn, backgroundColor: ShafoonDuppata.background }}
+          style={{ ...styles.btn, backgroundColor: VelvetShawls.background }}
         >
           {/* <SvgXml xml={DuppataClr.svg} width="25" height="25" /> */}
-          <Text style={{ ...styles.btntxt, color: ShafoonDuppata.items }}>
-            Shafoon Duppata
+          <Text style={{ ...styles.btntxt, color: VelvetShawls.items }}>
+          Velvet Shawls
           </Text>
         </TouchableOpacity>
       </ScrollView>

@@ -2,10 +2,9 @@ import { View, Text, ScrollView, Image,ActivityIndicator } from "react-native";
 import React, { useState,useEffect,useRef } from "react";
 import { useTheme } from "../../../../Theme";
 import createStyles from "./styles";
-import SaleFilter from "./SaleFilter";
 import ProductDisplay from "../ProductDisplay/ProductDisplay";
 import ProductList from "../../../DataLists/ProductDataList/ProductList";
-export default function NewOnSale() {
+export default function Trending() {
   const {
     Tcolor,
     primary,
@@ -63,7 +62,7 @@ export default function NewOnSale() {
         }
       });
   
-      if (matchCount > 0 && item.onSale === true) {
+      if ( item.Trending === true) {
         // Push the item and its match count to the list
         filteredList.push({ item, matchCount });
       }
@@ -81,6 +80,7 @@ export default function NewOnSale() {
   
   
   
+  
   const handleViewMore = () => {
     console.log("red");
     // setVisibleProducts((prev) => prev + 10); // Show 10 more products when "View More" is clicked
@@ -94,9 +94,7 @@ export default function NewOnSale() {
   }, [Filtervalue]);
   return (
     <View style={styles.container}>
-      <Text style={styles.head}>NEW ON SALE</Text>
-      <SaleFilter Filtervalue={Filtervalue} setFiltervalue={setFiltervalue} />
-
+      <Text style={styles.head}>TRENDING</Text>
       {
         loading ? <ActivityIndicator size="large" color="#000" /> :
         <ProductDisplay

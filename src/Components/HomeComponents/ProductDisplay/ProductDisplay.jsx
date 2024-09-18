@@ -1,48 +1,82 @@
-import { View, FlatList, ScrollView } from 'react-native';
-import React from 'react';
-import RenderProducts from './RenderProducts';
-import { useTheme } from '../../../../Theme';
-import createStyles from './styles';
+import {
+  View,
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+  Text,
+} from "react-native";
+import React from "react";
+import RenderProducts from "./RenderProducts";
+import { useTheme } from "../../../../Theme";
+import createStyles from "./styles";
+import { scale } from "react-native-size-matters";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { MaterialIcons } from "@expo/vector-icons";
 export default function ProductDisplay({
   ProductList,
   visibleProducts,
-  handleViewMore
+  handleViewMore,
+  flatListRef 
 }) {
-    const { Tcolor, primary, secondary, background, theme, logo, toggleTheme ,DarkLogo} =useTheme();
+  const {
+    Tcolor,
+    primary,
+    secondary,
+    background,
+    theme,
+    logo,
+    toggleTheme,
+    DarkLogo,
+    bar,
+  } = useTheme();
   const styles = createStyles({
     Tcolor,
     primary,
     secondary,
+    bar,
     DarkLogo,
     background,
     theme,
     logo,
     toggleTheme,
   });
-  // Corrected renderItem to pass item object correctly
-  const renderItem = ({ item }) => <RenderProducts item={item} />;
+
 
   return (
-    <ScrollView 
-    pagingEnabled={true}
-    horizontal>
     <View style={styles.contain}>
       <FlatList
-        horizontal={true} // Horizontal scrolling
-        data={ProductList.slice(0, visibleProducts)} // Slice data for visible products
-        renderItem={renderItem} 
+      ref={flatListRef }
+        showsHorizontalScrollIndicator={false}
+        horizontal={true}
+        data={ProductList.slice(0,visibleProducts).concat([{ id: "viewMore" }])} 
+        renderItem={({ item, index, }) =>
+          item.id === "viewMore" ? (
+            <View style={styles.viewitembtn}>
+              <TouchableOpacity
+                activeOpacity={0.7}
+                style={styles.gobtn}
+                onPress={handleViewMore}
+              >
+                <Text style={styles.gotxt}>Go to Category</Text>
+                <FontAwesome name="long-arrow-right" size={21} color="#fff" />
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <RenderProducts
+              item={item}
+              visibleProducts={visibleProducts}
+              index={index}
+              length={ProductList.length}
+            />
+          )
+        }
+        ator={false}
         ItemSeparatorComponent={() => <View style={styles.gap} />}
-        // contentContainerStyle={styles.contentContainer} // Add styles to the content container
-       // Display 2 columns
-        pagingEnabled={true}// Corrected render function
-        keyExtractor={(item) => item.id.toString()} // Ensure ID is a string
-        onEndReached={handleViewMore} // Handle "View More" when reaching end
-        onEndReachedThreshold={0.5} // Trigger View More when 50% of the list is scrolled
+        pagingEnabled={true} 
+        keyExtractor={(item) => item.id.toString()} 
+        onEndReached={handleViewMore}
+        onEndReachedThreshold={0.5}
       />
     </View>
-    <View style={{width:10}}>
-
-    </View>
-    </ScrollView>
   );
 }
