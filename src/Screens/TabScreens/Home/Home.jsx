@@ -1,5 +1,5 @@
-import { View, Text, ScrollView, Image } from "react-native";
-import React, { useEffect, useState } from "react";
+import { View, Text, ScrollView, Image,Animated,Easing  } from "react-native";
+import React, { useEffect, useState ,useRef} from "react";
 import { useTheme } from "../../../../Theme";
 import { SafeAreaView } from "react-native-safe-area-context";
 import createStyles from "./styles";
@@ -42,6 +42,8 @@ const Home = ({ navigation }) => {
   const [FilterListing, setFilterListing] = useState("Allitems");
   const [ListData, setListData] = useState(HomeList);
   const [NavbarChecker, setNavbarChecker] = useState(false);
+  const slideAnim = useRef(new Animated.Value(-100)).current; // Initial position off-screen
+
   const handleScroll = (event) => {
     // Get the current scroll position
     const scrollY = event.nativeEvent.contentOffset.y;
@@ -54,43 +56,58 @@ const Home = ({ navigation }) => {
     }
   };
   // console.log(FilterListing)
+  // useEffect(() => {
+  //   const myfunc = () => {
+  //     if (FilterListing == "Allitems") {
+  //       setListData();
+  //     }
+  //   };
+  // }, [FilterListing]);
   useEffect(() => {
-    const myfunc = () => {
-      if (FilterListing == "Allitems") {
-        setListData();
-      }
-    };
-  }, [FilterListing]);
+    if (NavbarChecker) {
+      Animated.timing(slideAnim, {
+        toValue: 0, // Slide down into view
+        duration: 500, // Animation duration
+        easing: Easing.out(Easing.ease), // Smooth easing
+        useNativeDriver: true, // Use native driver for better performance
+      }).start();
+    } else {
+      Animated.timing(slideAnim, {
+        toValue: -100, // Move it back up
+        duration: 300,
+        easing: Easing.in(Easing.ease),
+        useNativeDriver: true,
+      }).start();
+    }
+  }, [NavbarChecker])
   return (
     <SafeAreaView style={styles.container}>
-      {NavbarChecker == true && (
-        <>
-          <View style={styles.head}>
-            <SecondHeader
-              SearchQuery={SearchQuery}
-              navigation={navigation}
-              setSearchQuery={setSearchQuery}
-              setFilterBar={setFilterBar}
-              FilterBar={FilterBar}
-            />
-            <View style={styles.margin}>
-              <SearchBar
-                SearchQuery={SearchQuery}
-                setSearchQuery={setSearchQuery}
-                setFilterBar={setFilterBar}
-                FilterBar={FilterBar}
-              />
-            </View>
+      {NavbarChecker === true && (
+      <Animated.View style={[styles.head, { transform: [{ translateY: slideAnim }] }]}>
+        <SecondHeader
+          SearchQuery={SearchQuery}
+          navigation={navigation}
+          setSearchQuery={setSearchQuery}
+          setFilterBar={setFilterBar}
+          FilterBar={FilterBar}
+        />
+        <View style={styles.margin}>
+          <SearchBar
+            SearchQuery={SearchQuery}
+            setSearchQuery={setSearchQuery}
+            setFilterBar={setFilterBar}
+            FilterBar={FilterBar}
+          />
+        </View>
 
-            {FilterBar && NavbarChecker == true && (
-              <FilterList
-                FilterListing={FilterListing}
-                setFilterListing={setFilterListing}
-              />
-            )}
-          </View>
-        </>
-      )}
+        {FilterBar && NavbarChecker === true && (
+          <FilterList
+            FilterListing={FilterListing}
+            setFilterListing={setFilterListing}
+          />
+        )}
+      </Animated.View>
+    )}
       <ScrollView
         onScroll={handleScroll}
         scrollEventThrottle={16}
@@ -144,10 +161,10 @@ const Home = ({ navigation }) => {
           />
         )}
         <ShopByPopularCategory />
-        <NewOnSale />
-        <NewArrivals/>
-        <Trending/>
-        <Blog/>
+        <NewOnSale navigation={navigation}/>
+        <NewArrivals  navigation={navigation}/>
+        <Trending  navigation={navigation}/>
+        <Blog  navigation={navigation}/>
       <View style={{ height: 400 }}></View>
 
         {/* <DesignLayout ListData={ListData}/> */}

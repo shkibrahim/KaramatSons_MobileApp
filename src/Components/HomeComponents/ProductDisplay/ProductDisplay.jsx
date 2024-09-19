@@ -13,6 +13,7 @@ import { scale } from "react-native-size-matters";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { MaterialIcons } from "@expo/vector-icons";
 export default function ProductDisplay({
+  navigation,
   ProductList,
   visibleProducts,
   handleViewMore,
@@ -64,6 +65,7 @@ export default function ProductDisplay({
           ) : (
             <RenderProducts
               item={item}
+              navigation={navigation}
               visibleProducts={visibleProducts}
               index={index}
               length={ProductList.length}

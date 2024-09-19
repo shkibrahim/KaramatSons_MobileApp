@@ -5,7 +5,7 @@ import createStyles from "./styles";
 import SaleFilter from "./SaleFilter";
 import ProductDisplay from "../ProductDisplay/ProductDisplay";
 import ProductList from "../../../DataLists/ProductDataList/ProductList";
-export default function NewOnSale() {
+export default function NewOnSale({navigation}) {
   const {
     Tcolor,
     primary,
@@ -101,6 +101,7 @@ export default function NewOnSale() {
         loading ? <ActivityIndicator size="large" color="#000" /> :
         <ProductDisplay
         handleViewMore={handleViewMore}
+        navigation={navigation}
         visibleProducts={visibleProducts}
         ProductList={FilteredData}
         flatListRef ={flatListRef}

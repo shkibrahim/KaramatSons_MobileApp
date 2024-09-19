@@ -4,7 +4,8 @@ import { useTheme } from "../../../../Theme";
 import createStyles from "./styles";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Icon } from "react-native-paper";
-export default function RenderProducts({ item, index, length,visibleProducts }) {
+import { useNavigation } from "@react-navigation/native";
+export default function RenderProducts({ item, index, length,visibleProducts, }) {
   const {
     Tcolor,
     primary,
@@ -15,6 +16,7 @@ export default function RenderProducts({ item, index, length,visibleProducts }) 
     toggleTheme,
     DarkLogo,
   } = useTheme();
+  const navigation = useNavigation();
   const styles = createStyles({
     Tcolor,
     primary,bar,
@@ -26,7 +28,10 @@ export default function RenderProducts({ item, index, length,visibleProducts }) 
     toggleTheme,
   });
   return (
-    <View style={[styles.viewitem, ]}>
+    <TouchableOpacity
+    activeOpacity={0.6}
+    onPress={() => navigation.navigate('ProductScreen')}
+     style={[styles.viewitem, ]}>
         {/* <View>
 
         </View> */}
@@ -67,6 +72,6 @@ export default function RenderProducts({ item, index, length,visibleProducts }) 
           SAVE PKR {(item.SalePercentage / 100) * item.RetailPrice}
         </Text>
       )}
-    </View>
+    </TouchableOpacity>
   );
 }

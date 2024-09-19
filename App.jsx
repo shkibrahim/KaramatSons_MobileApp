@@ -1,6 +1,7 @@
 import React ,{useRef,useEffect,useState}from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LogBox,} from 'react-native';
+import 'react-native-reanimated';
 import { useFonts } from 'expo-font';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
 LogBox.ignoreLogs([{level: 'error'}]);

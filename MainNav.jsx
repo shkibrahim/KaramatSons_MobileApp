@@ -13,6 +13,7 @@ import Home from './src/Screens/TabScreens/Home/Home';
 import Cart from './src/Screens/TabScreens/Cart/Cart';
 import Liked from './src/Screens/TabScreens/Liked/Liked';
 import Profile from './src/Screens/TabScreens/Profile/Profile';
+import ProductScreen from './src/Screens/NavScreens/ProductScreen/ProductScreen';
 // import Portfolio from './src/screens/Portfolio/Portfolio';
 // import Services from './src/screens/Services/Services';
 // import Profile from './src/screens/Profile/Profile';
@@ -150,11 +151,11 @@ const TabNavigator = () => {
       component={TabNavigator}
       options={{headerShown: false, animation: 'slide_from_bottom'}}
     />
-   {/* <Stack.Screen
-      name="Login"
-      component={Login}
-      options={{headerShown: false, animation: 'slide_from_left',gestureEnabled: false ,}}
-    /> */}
+   <Stack.Screen
+      name="ProductScreen"
+      component={ProductScreen}
+      options={{headerShown: false, animation: 'slide_from_left'}}
+    />
      {/* <Stack.Screen
       name="MessageView"
       component={MessageView}
