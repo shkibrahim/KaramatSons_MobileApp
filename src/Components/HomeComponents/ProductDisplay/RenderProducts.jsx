@@ -30,7 +30,9 @@ export default function RenderProducts({ item, index, length,visibleProducts, })
   return (
     <TouchableOpacity
     activeOpacity={0.6}
-    onPress={() => navigation.navigate('ProductScreen')}
+    onPress={() => navigation.navigate('ProductScreen',{
+      item:item
+    })}
      style={[styles.viewitem, ]}>
         {/* <View>
 

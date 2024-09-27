@@ -23,7 +23,7 @@ export default TopDesignList = [
        
         // Image: 'https://i.pinimg.com/564x/20/87/c1/2087c13e3ddaf1a78f2226627a912610.jpg',
 
-        Image: require('../assets/images/Posts/3.jpg'),
+        Image: require('../assets/images/Posts/7.jpg'),
 
   
   

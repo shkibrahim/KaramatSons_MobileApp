@@ -3,7 +3,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useRef, useState} from 'react';
-import {StatusBar, StyleSheet, View} from 'react-native';
+import {StatusBar, StyleSheet, View,Platform} from 'react-native';
 import { scale } from 'react-native-size-matters';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import {Icon} from 'react-native-paper';
@@ -120,7 +120,7 @@ const TabNavigator = () => {
           tabBarActiveTintColor: primary,
           animation: 'slide_from_bottom',
           tabBarIcon: ({ focused }) => (
-            <View style={{ ...styles.background, backgroundColor: circle }}>
+            <View style={{ ...styles.background, backgroundColor: circle ,}}>
               <Icon
                 source={focused ? 'account-circle' : 'account-circle-outline'}
                 size={21}
@@ -154,7 +154,7 @@ const TabNavigator = () => {
    <Stack.Screen
       name="ProductScreen"
       component={ProductScreen}
-      options={{headerShown: false, animation: 'slide_from_left'}}
+      options={{headerShown: false, animation: 'slide_from_right'}}
     />
      {/* <Stack.Screen
       name="MessageView"
@@ -266,6 +266,7 @@ const styles = StyleSheet.create({
 
   background:{
     borderRadius:scale(40),
+    top:Platform.OS === 'ios' ? scale(20) : scale(0),
     width:scale(40),overflow:'hidden',
     height:scale(40),alignItems:"center",justifyContent:"center",
   }

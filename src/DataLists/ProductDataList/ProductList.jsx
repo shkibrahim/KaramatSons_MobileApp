@@ -3,6 +3,7 @@ export default ProductList = [
       id: 1,
       Title: "Hijab Kingry Pashmina Shawl",
       Gender:'women',
+      ProductCode: "HJ-001",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -35,6 +36,8 @@ export default ProductList = [
       id: 2,
       Title: "Summer Shawls Embroidered Loan Dupatta",
       Gender:'women',
+      ProductCode: "HJ-002",
+
 
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -70,6 +73,7 @@ export default ProductList = [
       id: 3,
       Title: "Woollen Stoller",
       Gender:'women',
+      ProductCode: "HJ-003",
 
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -104,6 +108,8 @@ export default ProductList = [
       id: 4,
       Title: "Velvet Shawl with Embroidery",
       Gender:'women',
+      ProductCode: "HJ-004",
+
 
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -138,6 +144,7 @@ export default ProductList = [
       id: 5,
       Title: "Karalic Border Shawl",
       Gender:'men',
+      ProductCode: "HJ-005",
 
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -172,6 +179,7 @@ export default ProductList = [
       id: 6,
       Title: "Embroidered Net Burka",
       Gender:'men',
+      ProductCode: "HJ-006",
 
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -206,6 +214,7 @@ export default ProductList = [
       id: 7,
       Title: "Barosha Dupatta",
       Gender:'men',
+      ProductCode: "HJ-007",
 
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -239,6 +248,7 @@ export default ProductList = [
     {
       id: 8,
       Gender:'men',
+      ProductCode: "HJ-008",
 
       Title: "Embroidered Loan Dupatta",
       Images: [

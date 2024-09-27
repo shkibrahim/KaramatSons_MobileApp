@@ -1,13 +1,19 @@
-import { View, Text,ScrollView,Image,Animated,Easing } from 'react-native'
+import { View, Text,ScrollView,Image,Animated,Easing, FlatList, TouchableOpacity } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import React,{useState,useRef,useEffect} from 'react'
+import {Button} from 'react-native-paper'
+import Entypo from '@expo/vector-icons/Entypo';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTheme } from '../../../../Theme'
 import SearchBar from '../../../Components/HomeComponents/SearchBar/SearchBar'
 import SecondHeader from '../../../Components/HomeComponents/SecondHeader/SecondHeader'
 import createStyles from './styles'
 import FilterList from '../../../Components/HomeComponents/FilterList/FilterList'
-export default function ProductScreen({navigation}) {
+import ProductImages from '../../../Components/HomeComponents/ProductImages/ProductImages'
+import ProductDetails from '../../../Components/HomeComponents/ProductDetails/ProductDetails'
+export default function ProductScreen({navigation,route}) {
+  const {item} = route.params;
+console.log(item)
     const {
         Tcolor,
         primary,
@@ -28,13 +34,13 @@ export default function ProductScreen({navigation}) {
         logo,
         toggleTheme,
       });
-
+const [Quantity, setQuantity] = useState(1);
       const [FilterBar, setFilterBar] = useState(false);
       const [SearchQuery, setSearchQuery] = useState("");
       const [FilterListing, setFilterListing] = useState("Allitems");
       const [ListData, setListData] = useState(HomeList);
       const [NavbarChecker, setNavbarChecker] = useState(false);
-
+const flatListRef = useRef(null);
       // Animation state
       const slideAnim = useRef(new Animated.Value(-100)).current; // Initial position off-screen
 
@@ -102,9 +108,7 @@ export default function ProductScreen({navigation}) {
       showsVerticalScrollIndicator={false}
     >
 
-        {/* <Text>
-            HELO
-        </Text> */}
+    
       {NavbarChecker === false && (
         <>
           <LinearGradient
@@ -132,6 +136,20 @@ export default function ProductScreen({navigation}) {
           setFilterListing={setFilterListing}
         />
       )}
+
+<ProductImages item={item} navigation={navigation}/>
+<ProductDetails item={item} setQuantity={setQuantity}  Quantity={Quantity}/>
+<TouchableOpacity activeOpacity={0.6} style={styles.btnbag} >
+<Text style={styles.btntxt}>Add TO BAG</Text>
+            </TouchableOpacity>
+            <TouchableOpacity activeOpacity={0.6} style={styles.btnshare} >
+            <Entypo name="share" size={20} color="black" />
+<Text style={styles.btntxts}>SHARE</Text>
+            </TouchableOpacity>
+            <View style={styles.widthf}>
+<Text style={styles.alertdes}>Note: Color of the article may varry from the uploaded picture</Text>
+
+            </View>
     </ScrollView>
   </SafeAreaView>
   )

@@ -26,7 +26,30 @@ const createStyles = (theme) => {
               },
               logotxt:{
           color:"white",fontFamily:'PoppinsR',
-              }
+              },
+
+              img:{
+                height:scale(150),width:devicewidth,resizeMode:'contain'
+              
+              },
+              btntxt:{
+                fontFamily:'PoppinsM',fontSize:scale(15),color:'white'
+              },
+              btntxts:{
+                fontFamily:'PoppinsR',fontSize:scale(13),color:theme.Tcolor
+              },
+              btnbag:{
+              width:devicewidth-30,alignSelf:"center",backgroundColor:theme.Tcolor,paddingVertical:scale(10),borderRadius:scale(15),alignItems:"center",marginTop:scale(10),
+              },
+              btnshare:{
+                width:devicewidth-30,alignSelf:"center",backgroundColor:'#fff',paddingVertical:scale(10),borderRadius:scale(15),alignItems:"center",marginTop:scale(10),flexDirection:'row',justifyContent:"center",borderWidth:scale(1),borderColor:theme.Tcolor,alignItems:'center',marginBottom:scale(20)
+                },
+                widthf:{
+                  width:devicewidth-30,alignItems:"flex-start",alignSelf:"center"
+                },
+                alertdes:{
+                  fontFamily:'PoppinsSB',fontSize:scale(12),color:theme.Tcolor,textAlign:'left'
+                }
     
   });
 };
