@@ -3,12 +3,15 @@ import React, { useState } from "react";
 import { useTheme } from "../../../../Theme";
 import createStyles from "./styles";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
-import SearchBar from "../SearchBar/SearchBar";
 import AntDesign from "@expo/vector-icons/AntDesign";
-export default function SecondHeader(
-  props,
-  { SearchQuery, setSearchQuery, setFilterBar, FilterBar }
-) {
+
+export default function SecondHeader({
+  navigation,
+  SearchQuery,
+  setSearchQuery,
+  setFilterBar,
+  FilterBar,
+}) {
   const {
     DarkLogo,
     LightLogo,
@@ -33,13 +36,14 @@ export default function SecondHeader(
   });
 
   const [cartnum, setcartnum] = useState(0);
+
   return (
     <View>
       <View style={styles.row}>
         <TouchableOpacity
           activeOpacity={0.6}
           onPress={() => {
-            props.navigation.openDrawer();
+            navigation.openDrawer();
           }}
         >
           <SimpleLineIcons name="menu" size={24} color="white" />
@@ -55,9 +59,6 @@ export default function SecondHeader(
           <AntDesign name="shoppingcart" size={29} color="white" />
         </TouchableOpacity>
       </View>
-
-
-    
     </View>
   );
 }

@@ -49,6 +49,8 @@ const ThemeChanger=()=>{
     { iconsource: AntDesign , iconcolor: Tcolor, icon: 'infocirlceo', label: 'About Us', screen: 'About' },
     { iconsource: MaterialIcons, iconcolor: Tcolor, icon: 'privacy-tip', label: 'Privacy Policy', screen: 'PrivacyPolicy' },
     { iconsource: Octicons , iconcolor: Tcolor, icon: 'code-of-conduct', label: 'Terms and Conditions', screen: 'Terms' },
+    { iconsource: Octicons , iconcolor: Tcolor, icon: 'database', label: 'Admin Section', screen: 'AddProduct' },
+
     
   ];
 
@@ -176,7 +178,7 @@ const ThemeChanger=()=>{
                 {item.label == 'Theme' && 
             
                 // <View style={styles.toggle}>
-                  <ImageBackground style={styles.toggle} source={BG}>
+                  <ImageBackground style={styles.toggle} source={'https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_1280.jpg'}>
                   <View style={{...styles.round,backgroundColor:circle1}}>
                   </View>
                   <View style={{...styles.round,backgroundColor:circle2}}>

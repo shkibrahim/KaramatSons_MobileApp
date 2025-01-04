@@ -48,6 +48,12 @@ const createStyles = (theme) => {
     Quantitytxt:{
         fontFamily:'PoppinsM',fontSize:scale(14),color:theme.Tcolor,marginTop:scale(20)
     },
+    leftbox:{
+        backgroundColor:'red',padding:scale(7),borderRadius:scale(2),width:scale(150),alignItems:"center",justifyContent:"center",elevation:scale(5),shadowColor: 'black',shadowOpacity: 0.5,shadowRadius: 5,shadowOffset: { width: 0, height: 2 },marginTop:scale(10)
+    },
+    lfttxt:{
+        color:'white',fontFamily:'PoppinsM',fontSize:scale(15)
+    },
     boxrow:{
          flexDirection:"row",alignItems:'center',borderWidth:scale(0.6),borderColor:theme.Tcolor,marginVertical:scale(10),paddingHorizontal:scale(10),borderRadius:scale(5),width:scale(150),justifyContent:"space-between"
     }

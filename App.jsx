@@ -1,6 +1,6 @@
 import React ,{useRef,useEffect,useState}from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { LogBox,} from 'react-native';
+import { LogBox,StatusBar} from 'react-native';
 import 'react-native-reanimated';
 import { useFonts } from 'expo-font';
 LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
@@ -9,7 +9,17 @@ LogBox.ignoreAllLogs();
 import {PaperProvider} from 'react-native-paper';
 import { Themer } from './Theme';
 import MainNav from './MainNav';
+import {
+  configureReanimatedLogger,
+  ReanimatedLogLevel,
+} from 'react-native-reanimated';
+// import { StatusBar } from 'expo-status-bar';
 
+// This is the default configuration
+configureReanimatedLogger({
+  level: ReanimatedLogLevel.warn,
+  strict: false, // Reanimated runs in strict mode by default
+});
 export default function App() {
 const [loaded]=useFonts({
   PoppinsR: require('./assets/fonts/Poppins-Regular.ttf'),
@@ -30,9 +40,10 @@ if (!loaded){
 
   return (
     <Themer>
-    <PaperProvider>
+    {/* <PaperProvider> */}
+      {/* <StatusBar style="dark" backgroundColor='#000' translucent  /> */}
       <MainNav  />
-    </PaperProvider>
+    {/* </PaperProvider> */}
   </Themer>
   );
 }

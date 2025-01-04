@@ -16,6 +16,16 @@ import NewOnSale from "../../../Components/HomeComponents/NewOnSale/NewOnSale";
 import NewArrivals from "../../../Components/HomeComponents/NewArrivals/NewArrivals";
 import Trending from "../../../Components/HomeComponents/Trending/Trending";
 import Blog from "../../../Components/HomeComponents/Blog/Blog";
+import {
+  configureReanimatedLogger,
+  ReanimatedLogLevel,
+} from 'react-native-reanimated';
+
+// This is the default configuration
+configureReanimatedLogger({
+  level: ReanimatedLogLevel.warn,
+  strict: false, // Reanimated runs in strict mode by default
+});
 const Home = ({ navigation }) => {
   const {
     Tcolor,

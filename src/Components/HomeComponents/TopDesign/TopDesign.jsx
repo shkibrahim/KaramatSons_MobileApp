@@ -82,7 +82,7 @@ const carouselRef = useRef(null);
         renderItem={({ item }) => (
           <Image
             source={item.Image} // Use 'item.Image' instead of destructuring
-            style={{ width: '100%', height: '100%' }}
+            style={{ width: '100%', height: '100%',objectFit:'fill' }}
           />
         )}
       

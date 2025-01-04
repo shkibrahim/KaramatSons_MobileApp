@@ -1,8 +1,21 @@
 export default ProductList = [
     {
       id: 1,
+      size:'2.5m',
       Title: "Hijab Kingry Pashmina Shawl",
-      Gender:'women',
+      Gender:'Women',
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
       ProductCode: "HJ-001",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -30,15 +43,27 @@ export default ProductList = [
       ],
       Likes: 100,
       LikedBy: [{ id: 1, Name: "Ali Ashfaq" }, { id: 2, Name: "Ali Raza" }],
-      updateAt: "2021-09-01"
+      updateAt: "2024-09-01"
     },
     {
       id: 2,
+      size:'2.5m',
+
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
       Title: "Summer Shawls Embroidered Loan Dupatta",
-      Gender:'women',
+      Gender:'Women',
       ProductCode: "HJ-002",
-
-
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -59,6 +84,7 @@ export default ProductList = [
       createAt: "2022-01-01",
       Stock: 150,
       Popular: true,
+      size:'2.5m',
       Trending: false,
       Rating: 4.5,
       Reviews: [
@@ -67,14 +93,27 @@ export default ProductList = [
       ],
       Likes: 80,
       LikedBy: [{ id: 1, Name: "Hina Tariq" }, { id: 2, Name: "Sara Khan" }],
-      updateAt: "2022-02-01"
+      updateAt: "2024-11-11"
     },
     {
       id: 3,
-      Title: "Woollen Stoller",
-      Gender:'women',
-      ProductCode: "HJ-003",
+      size:'2.5m',
 
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
+      Title: "Woollen Stoller",
+      Gender:'Women',
+      ProductCode: "HJ-003",
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -91,7 +130,7 @@ export default ProductList = [
       Stuff: "Shafoon",
       onSale: true,
       SalePercentage: 20,
-      createAt: "2024-08-01",
+      createAt: "2024-12-01",
       Stock: 120,
       Popular: false,
       Trending: true,
@@ -105,12 +144,24 @@ export default ProductList = [
       updateAt: "2024-05-15"
     },
     {
+      size:'2.5m',
+
       id: 4,
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
       Title: "Velvet Shawl with Embroidery",
-      Gender:'women',
+      Gender:'Women',
       ProductCode: "HJ-004",
-
-
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -119,7 +170,6 @@ export default ProductList = [
       Description: "Swiss loan shawl with formal embroidery.",
       SubDescription: "Hand made Indian Wool Shawl",
       Season:'Summer',
-
       PurchasePrice: 1300,
       WholeSalePrice: 1600,
       RetailPrice: 3500,
@@ -141,11 +191,24 @@ export default ProductList = [
       updateAt: "2024-04-20"
     },
     {
-      id: 5,
-      Title: "Karalic Border Shawl",
-      Gender:'men',
-      ProductCode: "HJ-005",
+      size:'2.5m',
 
+      id: 5,
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
+      Title: "Karalic Border Shawl",
+      Gender:'Men',
+      ProductCode: "HJ-005",
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -154,7 +217,6 @@ export default ProductList = [
       Description: "Karalic border shawl for elegant looks.",
       SubDescription: "Hand made Indian Wool Shawl",
       Season:'Summer',
-
       PurchasePrice: 1100,
       WholeSalePrice: 1400,
       RetailPrice: 2800,
@@ -168,19 +230,34 @@ export default ProductList = [
       Trending: true,
       Rating: 4.8,
       Reviews: [
-        { id: 1, Review: "Stylish and beautiful", Rating: 5, Name: "Fatima Zahra" },
-        { id: 2, Review: "I love the border", Rating: 4, Name: "Imran Sheikh" }
+        { id: 1, Review: "Stylish and beautiful with stunning beautiful design with awesome thread work", Rating: 5, Name: "Fatima Zahra" },
+        { id: 2, Review: "I love the border", Rating: 4, Name: "Imran Sheikh" },
+        { id: 3, Review: "I love the border design stunning", Rating: 5, Name: "Imran Ali" }
+
       ],
       Likes: 85,
       LikedBy: [{ id: 1, Name: "Fatima Zahra" }, { id: 2, Name: "Imran Sheikh" }],
       updateAt: "2022-05-10"
     },
     {
-      id: 6,
-      Title: "Embroidered Net Burka",
-      Gender:'men',
-      ProductCode: "HJ-006",
+      size:'2.5m',
 
+      id: 6,
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
+      Title: "Embroidered Net Burka",
+      Gender:'Men',
+      ProductCode: "HJ-006",
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -189,7 +266,6 @@ export default ProductList = [
       Description: "Net Burka with detailed embroidery.",
       SubDescription: "Hand made Indian Wool Shawl",
       Season:'Summer',
-
       PurchasePrice: 1800,
       WholeSalePrice: 2000,
       RetailPrice: 4000,
@@ -211,11 +287,24 @@ export default ProductList = [
       updateAt: "2024-06-15"
     },
     {
-      id: 7,
-      Title: "Barosha Dupatta",
-      Gender:'men',
-      ProductCode: "HJ-007",
+      size:'2.5m',
 
+      id: 7,
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
+      Title: "Barosha Dupatta",
+      Gender:'Men',
+      ProductCode: "HJ-007",
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
         { id: 2, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -246,10 +335,23 @@ export default ProductList = [
       updateAt: "2024-07-20"
     },
     {
-      id: 8,
-      Gender:'men',
-      ProductCode: "HJ-008",
+      size:'2.5m',
 
+      id: 8,
+      ProductType: "Shawl",
+      Fabric:'Pashmina',
+      Color:[
+        { id: 1, Color: "Black" ,Code:'#000000'},
+        { id: 2, Color: "Maroon" ,Code:'#800000' },
+        { id: 3, Color: "NavyBlue",Code:'#000435' },
+        { id: 4, Color: "Beige" ,Code:'#ecdd9a' },
+        { id: 5, Color: "Biscotti" ,Code:'#e3c565' },
+        { id: 6, Color: "Shortbread" ,Code:'#fbe790' },
+      ],
+      Gender:'Men',
+      ProductCode: "HJ-008",
+      Details1: "Hand made Indian Wool Shawl",
+      Details2: "Best for Hijab with a luxurious Hand made border.",
       Title: "Embroidered Loan Dupatta",
       Images: [
         { id: 1, Image: "https://res.cloudinary.com/dzv2a0f0i/image/upload/v1726588239/Shawls/avuthkdtiitkokyzzf8p.png" },
@@ -258,10 +360,8 @@ export default ProductList = [
       ],
       Description: "Elegant loan dupatta with fine embroidery.",
       SubDescription: "Hand made Indian Wool Shawl",
-
       PurchasePrice: 900,
       Season:'Summer',
-
       WholeSalePrice: 1100,
       RetailPrice: 2500,
       Category: "Dupatta",

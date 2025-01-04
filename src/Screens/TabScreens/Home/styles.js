@@ -10,7 +10,7 @@ const createStyles = (theme) => {
     container: {
       flex: 1,
       backgroundColor: theme.background,
-      height:deviceheight
+      height:deviceheight,width:devicewidth
     }, 
     margin:{
       marginTop:scale(10)

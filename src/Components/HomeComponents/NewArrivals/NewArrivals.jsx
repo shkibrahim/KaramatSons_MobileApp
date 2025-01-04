@@ -82,7 +82,7 @@ export default function NewArrivals() {
       .sort((a, b) => b.matchCount - a.matchCount)
       .map((entry) => entry.item); // Extract the item after sorting
   
-    console.log("Sorted Filtered List", sortedFilteredList, sortedFilteredList.length);
+    // console.log("Sorted Filtered List", sortedFilteredList, sortedFilteredList.length);
     setFilteredData(sortedFilteredList); // Update the state with the sorted list
     setLoading(false);
   };

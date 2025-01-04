@@ -19,7 +19,7 @@ const createStyles = (theme) => {
 
     },
     input:{
-        fontFamily:'PoppinsR',width:'100%',fontSize:scale(15),height:'100%',color:theme.Tcolor,overflow:"hidden",marginRight:scale(3)
+        fontFamily:'PoppinsR',width:'100%',fontSize:scale(15),height:'100%',color:'white',overflow:"hidden",marginRight:scale(3)
     },
     absolute:{
         position:'absolute',left:scale(4)

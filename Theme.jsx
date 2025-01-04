@@ -25,7 +25,7 @@ const [DarkLogo,setDarkLogo] =useState(require('./src/assets/images/logoblackbg.
       setTcolor('#343031'),setIconsColor('white')
       setLogo(require('./src/assets/images/logowhitebg.png')); // Set to light logo if you have one
     } else if (theme === 'dark') {
-      setbar('#343031')
+      setbar('#292526')
       setcircle('#292526')
 
       setPrimary('#1f84ce');

@@ -62,6 +62,19 @@ export default function ProductDetails({item,Quantity,setQuantity}) {
         <Entypo name="plus" size={24} color={Tcolor} />
             </TouchableOpacity>
         </View>
+
+ 
+ {
+        item.Stock<5 ? 
+        <View style={styles.leftbox}>
+    <Text style={styles.lfttxt}>FEW ITEMS LEFT</Text>
+
+</View> : null
+ }
+
+    <Text style={styles.Quantitytxt}>Size : <Text style={{...styles.Quantitytxt,color:primary}}>{item.size}</Text> </Text> 
+    
+
     </View>
   )
 }

@@ -15,7 +15,7 @@ backgroundColor:'#000',height:scale(150),width:devicewidth
 height:scale(35),width:'100%',resizeMode:'contain',margin:scale(10),alignSelf:"center"
     },
     row:{
-        alignItems:"center",flexDirection:"row",justifyContent:"space-between",paddingHorizontal:scale(16)
+        alignItems:"center",flexDirection:"row",justifyContent:"space-between",paddingHorizontal:scale(16),width:'100%'
     },
     center:{
         alignItems:"center"

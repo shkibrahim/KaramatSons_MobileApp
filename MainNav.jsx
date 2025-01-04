@@ -14,6 +14,7 @@ import Cart from './src/Screens/TabScreens/Cart/Cart';
 import Liked from './src/Screens/TabScreens/Liked/Liked';
 import Profile from './src/Screens/TabScreens/Profile/Profile';
 import ProductScreen from './src/Screens/NavScreens/ProductScreen/ProductScreen';
+import AddProduct from './src/Screens/AdminSection/AddProduct/AddProduct';
 // import Portfolio from './src/screens/Portfolio/Portfolio';
 // import Services from './src/screens/Services/Services';
 // import Profile from './src/screens/Profile/Profile';
@@ -186,24 +187,30 @@ const [isAuthenticated,setisAuthenticated] = useState(false)
 const navigationRef = useRef()
 return (
   <NavigationContainer  ref={navigationRef}>
-  <StatusBar
-    backgroundColor={theme=='light'? 'transparent' : 'black'}
+  {/* <StatusBar
+    backgroundColor='#000'
     barStyle="dark-content"
-  />
+    translucent={Platform.OS === "ios" ? true : false} 
+  /> */}
 
+<StatusBar
+    backgroundColor={theme=='light'? primary : 'black'}
+    translucent={Platform.OS === "ios" ? true : true}
+    barStyle={theme == 'dark' ? 'light-content' : 'dark-content'}
+  />
   <Drawer.Navigator drawerContent={() => <SideBar />}>
     <Drawer.Screen name="Menu" options={{headerShown: false}}>
       {() => <StackNavigator isAuthenticated={isAuthenticated} />}
     </Drawer.Screen>
     
 
-{/* <Drawer.Screen
-      name="Search"
+<Drawer.Screen
+      name="AddProduct"
       options={{
         headerShown: false,
       }}
-      component={Search}
-    /> */}
+      component={AddProduct}
+    />
     {/* <Drawer.Screen
       name="Chat"
       options={{

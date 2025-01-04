@@ -11,6 +11,8 @@ import createStyles from './styles'
 import FilterList from '../../../Components/HomeComponents/FilterList/FilterList'
 import ProductImages from '../../../Components/HomeComponents/ProductImages/ProductImages'
 import ProductDetails from '../../../Components/HomeComponents/ProductDetails/ProductDetails'
+import ProductSubDetails from '../../../Components/HomeComponents/ProductSubDetails/ProductSubDetails';
+import Reviews from '../../../Components/HomeComponents/Reviews/Reviews';
 export default function ProductScreen({navigation,route}) {
   const {item} = route.params;
 console.log(item)
@@ -111,7 +113,7 @@ const flatListRef = useRef(null);
     
       {NavbarChecker === false && (
         <>
-          <LinearGradient
+          {/* <LinearGradient
             style={{
             //   position: "absolute",
               zIndex: 1000,
@@ -126,7 +128,7 @@ const flatListRef = useRef(null);
               <Image source={DarkLogo} style={styles.logo} />
               <Text style={styles.logotxt}>Karamat Sons</Text>
             </View>
-          </LinearGradient>
+          </LinearGradient> */}
         </>
       )}
 
@@ -149,7 +151,11 @@ const flatListRef = useRef(null);
             <View style={styles.widthf}>
 <Text style={styles.alertdes}>Note: Color of the article may varry from the uploaded picture</Text>
 
+
             </View>
+            <ProductSubDetails item={item}/>
+            <Reviews item={item} />
+
     </ScrollView>
   </SafeAreaView>
   )

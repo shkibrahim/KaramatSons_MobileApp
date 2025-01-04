@@ -11,7 +11,7 @@ const createStyles = (theme) => {
 
     contain:{ flex: 1 ,marginVertical:scale(10),marginLeft:scale(10),overflow:"hidden"},
     container: {
-        marginVertical:scale(10),
+        marginVertical:scale(10),flex:1
   
       }, 
       head:{
